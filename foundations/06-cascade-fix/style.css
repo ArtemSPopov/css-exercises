@@ -8,20 +8,14 @@ body {
   font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
-
 .para {
   font-size: 22px;
 }
 
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -29,14 +23,30 @@ body {
   font-size: 20px;
 }
 
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
-}
+/* 
+  Two solutions are combined for the following rule: changing order and using ID selector of higher specificity.
+
+  Another solution would be to use a chained selector .button.confirm to achieve higher specificity.
+*/
+
+#confirm-button {
+  background: green;
+  color: white;
+  font-weight: bold;
+} 
 
 div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
+}
+
+/*
+  One of the alternative solutions to the following rule would be to use a descendant combinator instead of a chaining selector.
+*/
+
+div.child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
 }
